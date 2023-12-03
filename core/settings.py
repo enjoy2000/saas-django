@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os, random, string
-from pathlib        import Path
-from dotenv         import load_dotenv
-from distutils.util import strtobool 
+from pathlib import Path
+from dotenv import load_dotenv
+from distutils.util import strtobool
 from django.contrib import messages
 
 load_dotenv()  # take environment variables from .env.
@@ -27,14 +27,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 if not SECRET_KEY:
-    SECRET_KEY = ''.join(random.choice( string.ascii_lowercase  ) for i in range( 32 ))
+    SECRET_KEY = ''.join(random.choice(string.ascii_lowercase) for i in range(32))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = strtobool(os.getenv('DEBUG', "True"))
 
 # Hosts Settings
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:5085', 'http://127.0.0.1:8000',
+                        'http://127.0.0.1:80', 'https://saas1click.onrender.com/']
 
 # Used by DEBUG-Toolbar 
 INTERNAL_IPS = [
@@ -55,14 +56,14 @@ INSTALLED_APPS = [
     "apps.common",
     "apps.users",
     "apps.api",
-    "apps.charts", 
+    "apps.charts",
     "apps.tables",
     "apps.tasks",
 
     "django_celery_results",
 
     'rest_framework',
-    'rest_framework.authtoken', 
+    'rest_framework.authtoken',
     'drf_spectacular',
     'django_api_gen',
 
@@ -83,7 +84,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "core.urls"
 
-UI_TEMPLATES = os.path.join(BASE_DIR, 'templates') 
+UI_TEMPLATES = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {
@@ -103,27 +104,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "core.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DB_ENGINE   = os.getenv('DB_ENGINE'   , None)
-DB_USERNAME = os.getenv('DB_USERNAME' , None)
-DB_PASS     = os.getenv('DB_PASS'     , None)
-DB_HOST     = os.getenv('DB_HOST'     , None)
-DB_PORT     = os.getenv('DB_PORT'     , None)
-DB_NAME     = os.getenv('DB_NAME'     , None)
+DB_ENGINE = os.getenv('DB_ENGINE', None)
+DB_USERNAME = os.getenv('DB_USERNAME', None)
+DB_PASS = os.getenv('DB_PASS', None)
+DB_HOST = os.getenv('DB_HOST', None)
+DB_PORT = os.getenv('DB_PORT', None)
+DB_NAME = os.getenv('DB_NAME', None)
 
 if DB_ENGINE and DB_NAME and DB_USERNAME:
-    DATABASES = { 
-      'default': {
-        'ENGINE'  : 'django.db.backends.' + DB_ENGINE, 
-        'NAME'    : DB_NAME,
-        'USER'    : DB_USERNAME,
-        'PASSWORD': DB_PASS,
-        'HOST'    : DB_HOST,
-        'PORT'    : DB_PORT,
-        }, 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.' + DB_ENGINE,
+            'NAME': DB_NAME,
+            'USER': DB_USERNAME,
+            'PASSWORD': DB_PASS,
+            'HOST': DB_HOST,
+            'PORT': DB_PORT,
+        },
     }
 else:
     DATABASES = {
@@ -132,7 +132,6 @@ else:
             'NAME': 'db.sqlite3',
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -152,7 +151,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -164,11 +162,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL  = "static/"
+STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = (
@@ -183,26 +180,25 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
 # ### Async Tasks (Celery) Settings ###
 
-CELERY_SCRIPTS_DIR        = os.path.join(BASE_DIR, "tasks_scripts" )
+CELERY_SCRIPTS_DIR = os.path.join(BASE_DIR, "tasks_scripts")
 
-CELERY_LOGS_URL           = "/tasks_logs/"
-CELERY_LOGS_DIR           = os.path.join(BASE_DIR, "tasks_logs"    )
+CELERY_LOGS_URL = "/tasks_logs/"
+CELERY_LOGS_DIR = os.path.join(BASE_DIR, "tasks_logs")
 
-CELERY_BROKER_URL         = os.environ.get("CELERY_BROKER", "redis://localhost:6379")
-CELERY_RESULT_BACKEND     = os.environ.get("CELERY_BROKER", "redis://localhost:6379")
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://localhost:6379")
+CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://localhost:6379")
 
 CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT    = 30 * 60
-CELERY_CACHE_BACKEND      = "django-cache"
-CELERY_RESULT_BACKEND     = "django-db"
-CELERY_RESULT_EXTENDED    = True
-CELERY_RESULT_EXPIRES     = 60*60*24*30 # Results expire after 1 month
-CELERY_ACCEPT_CONTENT     = ["json"]
-CELERY_TASK_SERIALIZER    = 'json'
-CELERY_RESULT_SERIALIZER  = 'json'
+CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_CACHE_BACKEND = "django-cache"
+CELERY_RESULT_BACKEND = "django-db"
+CELERY_RESULT_EXTENDED = True
+CELERY_RESULT_EXPIRES = 60 * 60 * 24 * 30  # Results expire after 1 month
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
 ########################################
 
 
@@ -211,7 +207,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # ### API-GENERATOR Settings ###
 API_GENERATOR = {
-    'product' : "apps.common.models.Product",
+    'product': "apps.common.models.Product",
 }
 
 REST_FRAMEWORK = {
@@ -227,7 +223,7 @@ REST_FRAMEWORK = {
 ########################################
 
 # risky
-SESSION_COOKIE_HTTPONLY=False
+SESSION_COOKIE_HTTPONLY = False
 
 MESSAGE_TAGS = {
     messages.INFO: 'text-blue-800 border border-blue-300 bg-blue-50 dark:text-blue-400 dark:border-blue-800',
