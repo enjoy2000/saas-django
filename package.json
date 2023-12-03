@@ -1,7 +1,7 @@
 {
-  "name": "rocket-django",
+  "name": "saas-django",
   "version": "1.0.0",
-  "description": "<div align=\"center\">\r     <a href=\"https://rocket-django.onrender.com\">\r         <img src=\"https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272178364-cbac6d97-b2dc-4d95-bab6-891f4ee7d84d.png\"\" width=\"64\" height=\"64\" alt=\"Rocket Icon\">\r     </a>\r     <h1>\r         <a href=\"https://rocket-django.onrender.com\">\r             Rocket Django\r         </a>\r     </h1>\r     <p>\r         <strong>TailwindCSS</strong> &bull; <strong>Flowbite</strong> &bull; <strong>API Generator</strong> &bull; <strong>Celery</strong> &bull; <strong>DataTables</strong> &bull; <strong>Charts</strong> &bull; <strong>Docker</strong> &bull; <strong>CI/CD</strong>\r     </p>    \r </div>",
+  "description": "<div align=\"center\">\r     <a href=\"https://saas-django.examplesite.com\">\r         <img src=\"https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272178364-cbac6d97-b2dc-4d95-bab6-891f4ee7d84d.png\"\" width=\"64\" height=\"64\" alt=\"Rocket Icon\">\r     </a>\r     <h1>\r         <a href=\"https://saas-django.examplesite.com\">\r             Rocket Django\r         </a>\r     </h1>\r     <p>\r         <strong>TailwindCSS</strong> &bull; <strong>Flowbite</strong> &bull; <strong>API Generator</strong> &bull; <strong>Celery</strong> &bull; <strong>DataTables</strong> &bull; <strong>Charts</strong> &bull; <strong>Docker</strong> &bull; <strong>CI/CD</strong>\r     </p>    \r </div>",
   "main": "index.js",
   "directories": {
     "doc": "docs"

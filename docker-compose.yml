@@ -1,9 +1,10 @@
 version: '3.8'
 services:
-  rocket-django:
-    container_name: rocket_django
+  app:
     restart: always
     build: .
+    depends_on:
+      - postgres
     networks:
       - db_network
       - web_network
@@ -18,10 +19,17 @@ services:
     networks:
       - web_network
     depends_on: 
-      - rocket-django
+      - app
+  postgres:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:
+
 networks:
   db_network:
     driver: bridge
   web_network:
     driver: bridge
- 

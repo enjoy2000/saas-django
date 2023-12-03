@@ -1,9 +1,9 @@
 <div align="center">
-    <a href="https://rocket-django.onrender.com">
+    <a href="https://saas-django.examplesite.com">
         <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272178364-cbac6d97-b2dc-4d95-bab6-891f4ee7d84d.png"" width="64" height="64" alt="Rocket Icon">
     </a>
     <h1>
-        <a href="https://rocket-django.onrender.com">
+        <a href="https://saas-django.examplesite.com">
             Rocket Django
         </a>
     </h1>
@@ -56,8 +56,8 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
 > 👉 Download code
 
 ```bash
-$ git clone https://github.com/app-generator/rocket-django.git
-$ cd rocket-django
+$ git clone https://github.com/app-generator/saas-django.git
+$ cd saas-django
 ```
 
 > 👉 Create `.env` from `env.sample`
@@ -111,23 +111,23 @@ $ python manage.py runserver       # start the project
 
 > `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
 
-| Free Version                            | PRO - 🛒 **[$499](https://appseed.gumroad.com/l/rocket-django)** | Enterprise - 🛒 **[$4999](https://appseed.gumroad.com/l/rocket-django-enterprise)** |  
+| Free Version                            | PRO - 🛒 **[$499](https://appseed.gumroad.com/l/saas-django)** | Enterprise - 🛒 **[$4999](https://appseed.gumroad.com/l/saas-django-enterprise)** |  
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ **Django 4.1.12**                                                 | **Everything in Free**, plus:                                            | **Everything in PRO**, plus:        |
 | ✓ Best Practices                                                    | ✅ **OAuth** `Google`, `GitHub`                                          | ✅ **CSV to Model Generator**      | 
 | ✓ **TailwindCSS**/`Flowbite`                                        | ✅ **Stripe** Payments                                                   | ✅ **CSV Data Loader**             |
 | ✓ Extended User Model                                               | ✅ **Wagtail** CMS                                                       | ✅ **1 Week Custom Development**   |
-| ✓ `Simple` [Charts](https://rocket-django.onrender.com/charts/)     | ✅ **Enhanced** [Charts](https://rocket-django-pro.onrender.com/charts/)     | ✅ Dedicated Support               |
-| ✓ `Simple` [DataTables](https://rocket-django.onrender.com/tables/) | ✅ **Enhanced** [DataTables](https://rocket-django-pro.onrender.com/tables/) | ✅ LIVE Deploy Assistance          |
-| ✓ [API](https://rocket-django.onrender.com/api/product/) via `DRF`  | ✅ **Multi-Language** (i18n) Support                                     | -                                  |
-| ✓ [Celery Beat](https://rocket-django.onrender.com/tasks/)          | ✅ **Sentry** `Error Reporting`                                          | -                                  |
+| ✓ `Simple` [Charts](https://saas-django.examplesite.com/charts/)     | ✅ **Enhanced** [Charts](https://saas-django-pro.examplesite.com/charts/)     | ✅ Dedicated Support               |
+| ✓ `Simple` [DataTables](https://saas-django.examplesite.com/tables/) | ✅ **Enhanced** [DataTables](https://saas-django-pro.examplesite.com/tables/) | ✅ LIVE Deploy Assistance          |
+| ✓ [API](https://saas-django.examplesite.com/api/product/) via `DRF`  | ✅ **Multi-Language** (i18n) Support                                     | -                                  |
+| ✓ [Celery Beat](https://saas-django.examplesite.com/tasks/)          | ✅ **Sentry** `Error Reporting`                                          | -                                  |
 | ✓ `Docker`                                                          | ✅ **Unlimited Projects**                                                | -                                  |
 | ✓ `CI/CD` Flow via Render                                           | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)      | -                                  |
 | ✓ `Free Support` (GitHub Issues)                                    | ✅ `Private REPO Access`                                                 | -                                  |
 |  -                                                                  | ✅ `Lifetime Updates`                                                     | -                                  |
 |  -                                                                  |  -                                                                        | -                                  |
 | ------------------------------------| ------------------------------------| ------------------------------------|
-| 🚀 [LIVE Demo](https://rocket-django.onrender.com/)                | 🚀 [LIVE Demo](https://rocket-django-pro.onrender.com/) | 🛒 `Order`: **[$4999](https://appseed.gumroad.com/l/rocket-django-enterprise)** |   
+| 🚀 [LIVE Demo](https://saas-django.examplesite.com/)                | 🚀 [LIVE Demo](https://saas-django-pro.examplesite.com/) | 🛒 `Order`: **[$4999](https://appseed.gumroad.com/l/saas-django-enterprise)** |   
 
 <br />
 
@@ -136,8 +136,8 @@ $ python manage.py runserver       # start the project
 > 👉 Download code
 
 ```bash
-$ git clone https://github.com/app-generator/rocket-django.git
-$ cd rocket-django
+$ git clone https://github.com/app-generator/saas-django.git
+$ cd saas-django
 ```
 
 > 👉 Start with Docker Compose
@@ -202,7 +202,7 @@ As a model, feel free to take a look at [build.sh](./build.sh), the file execute
 - Connect your `repo` which you want to deploy.
 - Fill the `Service Group Name` and click on the `Update Existing Resources` button.
 - Edit the Environment and [specify the PYTHON_VERSION](https://render.com/docs/python-version)
-  - Version `3.11.5` was used for **[this deployment](https://rocket-django.onrender.com/)**
+  - Version `3.11.5` was used for **[this deployment](https://saas-django.examplesite.com/)**
 - After that, your deployment will start automatically.
 
 At this point, the product should be LIVE.
@@ -261,4 +261,4 @@ At this point, the product should be LIVE.
 <br />
 
 ---
-[Rocket Django](https://github.com/app-generator/rocket-django) - Open-source starter styled with `Tailwind/Flowbite` actively suported by **[AppSeed](https://appseed.us)**.
+[Rocket Django](https://github.com/app-generator/saas-django) - Open-source starter styled with `Tailwind/Flowbite` actively suported by **[AppSeed](https://appseed.us)**.
