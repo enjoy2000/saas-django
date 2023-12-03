@@ -33,8 +33,8 @@ if not SECRET_KEY:
 DEBUG = strtobool(os.getenv('DEBUG', "True"))
 
 # Hosts Settings
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.examplesite.com', '0.0.0.0']
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:5085', 'http://127.0.0.1:8000', 'http://127.0.0.1:5085', 'https://saas-django.examplesite.com']
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['*']
 
 # Used by DEBUG-Toolbar 
 INTERNAL_IPS = [
